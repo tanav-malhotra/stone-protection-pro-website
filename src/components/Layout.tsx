@@ -25,7 +25,8 @@ export default function Layout({children}: { children: ReactNode }) {
             <SEOJsonLd/>
             <main className="min-h-screen flex flex-col bg-white text-black scroll-smooth">{children}</main>
             <footer className="mt-auto py-6 text-center text-sm text-gray-500">
-                © {new Date().getFullYear()} Tristate Stone Protection
+                Copyright © {new Date().getFullYear()} Tristate Stone Protection · Serving NY, NJ & CT ·
+                Crafted&nbsp;with&nbsp;care
             </footer>
         </>
     );
