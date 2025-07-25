@@ -1,5 +1,7 @@
 @import "tailwindcss";
 
+@tailwind utilities;
+
 :root {
   --background: #ffffff;
   --foreground: #171717;
@@ -23,4 +25,27 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+a {
+  position: relative;
+}
+
+a::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  left: 0;
+  bottom: -2px;
+  height: 1px;
+  background: black;
+  transition: width 0.2s;
+}
+
+a:hover::after {
+  width: 100%;
+}
+
+html {
+  scroll-behavior: smooth;
 }
