@@ -10,8 +10,8 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  /*--font-sans: var(--font-geist-sans);*/
+  /*--font-mono: var(--font-geist-mono);*/
 }
 
 @media (prefers-color-scheme: dark) {
@@ -34,7 +34,7 @@ a {
 a::after {
   content: "";
   position: absolute;
-  width: 0%;
+  width: 0;
   left: 0;
   bottom: -2px;
   height: 1px;
