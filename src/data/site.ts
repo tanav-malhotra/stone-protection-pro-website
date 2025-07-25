@@ -1,16 +1,16 @@
 export const contactEmail = "stoneprotection21@gmail.com";
 
 export const hero = {
-    headline: "Finally. A better way to protect your stone from etching.",
+    headline: "Protect Your Stone from Etching.",
     subheadline:
         "Tristate Stone Protection specializes in MORE™ AntiEtch™ application and custom stone installations.",
-    cta: "Email Us",
-};
+    cta: "Contact Us",
+} as const;
 
 export const services = [
     {
         title: "MORE™ AntiEtch™ Application",
-        desc: "Durable, ultra-low visibility coating that stops etching and staining on marble and other acid-sensitive stones.",
+        desc: "Durable, ultra‑low visibility coating that stops etching and staining on marble and other acid‑sensitive stones.",
     },
     {
         title: "Custom Stone Installations",
@@ -23,9 +23,9 @@ export const services = [
 ] as const;
 
 export const antiEtchBenefits = [
-    "Stops acid-etching & staining",
+    "Stops acid‑etching & staining",
     "Crystal clear finish",
-    "Food-safe, low odor, environmentally friendly",
+    "Food‑safe, low odor, environmentally friendly",
     "Zero porosity – germs/bacteria can’t grow",
     "Works on marble, limestone, onyx, travertine, concrete",
     "Honed, polished, and leathered finishes",
@@ -33,5 +33,4 @@ export const antiEtchBenefits = [
     "Won’t crack or peel, easily repairable",
     "Durable – 10 year expected wear",
 ] as const;
-
 
