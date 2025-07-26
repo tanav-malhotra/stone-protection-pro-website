@@ -4,6 +4,7 @@
 
 ### TODO:
 
+- Mobile-specific UI tweaks
 - Domain name purchase
 - transfer to Barbara's account
 - SEO (sitemap / robots.txt, etc.)
