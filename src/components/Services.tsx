@@ -7,20 +7,12 @@ export default function Services() {
 
             <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
                 {/* left column – service list */}
-                {/*<div className="h-[840px] px-10 py-12 flex flex-col justify-between bg-white shadow-sm">*/}
-                {/*    {services.map((s) => (*/}
-                {/*        <div key={s.title}>*/}
-                {/*            <h3 className="font-medium text-lg mb-1">{s.title}</h3>*/}
-                {/*            <p className="text-sm text-gray-600 leading-relaxed">{s.desc}</p>*/}
-                {/*        </div>*/}
-                {/*    ))}*/}
-                {/*</div>*/}
-                <div className="h-[620px] px-10 py-12 flex flex-col justify-between shadow-sm">
+                <div className="min-h-[620px] px-10 py-12 flex flex-col justify-between shadow-md rounded-lg gap-8">
                     {services.map((s) => (
                         <div
                             key={s.title}
-                            className="group px-1 py-8 border-b cursor-default
-                                     transition hover:bg-gray-50"
+                            className="bg-white/70 rounded-lg shadow-md p-8
++                                       transition hover:shadow-lg"
                         >
                             <h3
                                 className="text-xl font-semibold mb-2 tracking-tight
