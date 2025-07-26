@@ -38,6 +38,7 @@ export default function GalleryPage() {
                 {/* back pill aligned left */}
                 <Link
                     href="/#gallery"
+                    scroll={false}
                     className="inline-flex items-center gap-2 bg-black text-white
              px-5 py-2 rounded-md hover:bg-gray-800"
                 >
