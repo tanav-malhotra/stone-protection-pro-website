@@ -4,7 +4,6 @@
 
 ### TODO:
 
-- Mobile-specific UI tweaks
 - Domain name purchase
 - transfer to Barbara's account
 - SEO (sitemap / robots.txt, etc.)
@@ -77,4 +76,4 @@ npm start
 
 ---
 
-*Last updated: 25 July 2025*
+*Last updated: 26 July 2025*
