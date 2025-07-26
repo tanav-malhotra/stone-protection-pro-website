@@ -1,5 +1,5 @@
 import Head from "next/head";
-import {contactEmail} from "@/data/site";
+import {contactEmail, URL} from "@/data/site";
 
 export default function SEOJsonLd() {
     const data = {
@@ -10,7 +10,7 @@ export default function SEOJsonLd() {
             "MORE™ AntiEtch™ application and custom stone installations for marble and other stones in the Tri‑State area.",
         areaServed: "New York, New Jersey, Connecticut",
         email: contactEmail,
-        url: "https://tristatestoneprotection.com",
+        url: URL,
         serviceType: [
             "Stone protection",
             "MORE AntiEtch application",
