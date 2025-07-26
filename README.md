@@ -1,40 +1,79 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/pages/api-reference/create-next-app).
+## Tristate Stone Protection — Internal README
 
-## Getting Started
+*(for my eyes only)*
 
-First, run the development server:
+### TODO:
+
+- Domain name purchase
+- transfer to Barbara's account
+- SEO (sitemap / robots.txt, etc.)
+
+---
+
+### Quick Start 🛠️
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+# install deps
+npm i
+
+# run dev server
+npm run dev    # http://localhost:3000
+
+# build & generate sitemap / robots.txt
+npm run build
+npm start
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+### Tech Stack
 
-[API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+| Layer         | Choice                                            | Notes                                          |
+|---------------|---------------------------------------------------|------------------------------------------------|
+| **Framework** | **Next.js 14 (pages router)**                     | Simpler than App Router for a 1‑page brochure. |
+| **Runtime**   | Vercel                                            | Auto‑SSL + edge CDN.                           |
+| **Styling**   | Tailwind CSS                                      | Utility‑first; see `globals.css` for tweaks.   |
+| **Icons**     | @heroicons/react                                  | Only used for AntiEtch blue checkmarks.        |
+| **Light‑box** | yet‑another‑react‑lightbox (Zoom + Video plugins) | Handles image zoom & inline video playback.    |
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) instead of React pages.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/pages/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### Component Notes
 
-## Learn More
+| Component        | Gotchas / Customization                                                                                                                                                                                   |
+|------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **Hero**         | Background video in `/public/videos/hero.mp4` (muted, loop). Overlay dimming via `bg-black/50`.                                                                                                           |
+| **AntiEtch**     | Benefits array in `site.ts`. Split auto; center alignment. Uses `CheckCircleIcon`.                                                                                                                        |
+| **HomeGallery**  | • 2×2 grid (`max-w-[820px]`). <br>• First 3 tiles open light‑box (`cursor-zoom-in`). <br>• 4ᵗʰ tile = blurred link to `/gallery` with underline animation.                                                |
+| **Gallery Page** | • Big square tiles (`aspect-square`, gap‑12). <br>• Videos: thumbnail poster + controls; open in light‑box with sound. <br>• Light‑box slides typed as `Slide[]`; portrait videos keep aspect `720×1280`. |
+| **Layout / SEO** | OpenGraph meta + JSON‑LD LocalBusiness schema; sitemap generated post‑build by `next-sitemap`.                                                                                                            |
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn-pages-router) - an interactive Next.js tutorial.
+### Tailwind Tips 🖌️
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+| Utility          | Purpose                                           |
+|------------------|---------------------------------------------------|
+| `aspect-square`  | Keeps grid tiles perfect squares.                 |
+| `cursor-zoom-in` | Shows magnifier cursor on zoomable imgs.          |
+| `scroll-mt-16`   | Offset for anchor jump under fixed nav (\~64 px). |
 
-## Deploy on Vercel
+---
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### To‑Do / Future Ideas 💡
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/pages/building-your-application/deploying) for more details.
+* **Masonry grid** for gallery (CSS columns) if photo set grows.
+* **Lighthouse**: ensure all images have `alt`; run `npm run build && npx lighthouse ...`.
+
+---
+
+### Deployment Steps 🚀
+
+1. Push to GitHub `main`.
+2. Vercel auto‑deploys. Environment vars are set via dashboard.
+3. After domain name purchase, verify `/sitemap.xml` & `/robots.txt`.
+4. In Google Search Console, fetch as Google & submit sitemap.
+
+---
+
+*Last updated: 25 July 2025*
