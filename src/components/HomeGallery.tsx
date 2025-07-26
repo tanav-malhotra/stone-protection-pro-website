@@ -21,8 +21,8 @@ export default function HomeGallery() {
 
             {/* -------- BIG 2×2 GRID -------- */}
             <div
-                className="mx-auto max-w-[820px]          /* cap total width */
-                   grid grid-cols-2 gap-10        /* 2 columns always */
+                className="mx-auto max-w-[840px]          /* cap total width */
+                   grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 gap-10
                    place-content-center"
             >
                 {/* first 3 clickable images */}
@@ -84,18 +84,6 @@ export default function HomeGallery() {
                     zoom={{maxZoomPixelRatio: 2}}
                 />
             )}
-
-            {/*/!* Mobile‑only button if you still want one *!/*/}
-            {/*<div className="text-center mt-12 lg:hidden">*/}
-            {/*    <Link*/}
-            {/*        href="/gallery"*/}
-            {/*        className="inline-block px-8 py-3 border border-black*/}
-            {/*         hover:bg-black hover:text-white transition*/}
-            {/*         rounded-md"*/}
-            {/*    >*/}
-            {/*        View&nbsp;More&nbsp;→*/}
-            {/*    </Link>*/}
-            {/*</div>*/}
         </section>
     );
 }
