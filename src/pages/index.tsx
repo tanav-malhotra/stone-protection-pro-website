@@ -3,6 +3,7 @@ import Nav from "@/components/Nav";
 import Hero from "@/components/Hero";
 import Services from "@/components/Services";
 import AntiEtch from "@/components/AntiEtch";
+import HomeGallery from "@/components/HomeGallery";
 
 export default function Home() {
   return (
@@ -11,6 +12,7 @@ export default function Home() {
           <Hero/>
           <Services/>
           <AntiEtch/>
+          <HomeGallery/>
       </Layout>
   );
 }
