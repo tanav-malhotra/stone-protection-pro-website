@@ -20,13 +20,12 @@ export default function AntiEtch() {
             </p>
 
             {/* benefit list */}
-            {/*<div className="max-w-4xl mx-auto grid md:grid-cols-2 gap-8 text-left">*/}
-            <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-x-12 gap-y-6 place-items-center">
+            <div className="max-w-5xl mx-auto px-4 grid md:grid-cols-2 gap-x-8 gap-y-6 place-items-center">
                 {cols.map((col, i) => (
-                    <ul key={i} className="space-y-4 w-max">
+                    <ul key={i} className="space-y-4 text-left">
                         {col.map((item) => (
                             <li key={item} className="flex items-start gap-3">
-                                <CheckCircleIcon className="h-5 w-5 text-blue-600 mt-[2px]"/>
+                                <CheckCircleIcon className="h-5 w-5 text-blue-600 mt-[2px] shrink-0"/>
                                 <span className="text-gray-800">{item}</span>
                             </li>
                         ))}
