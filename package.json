@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@heroicons/react": "^2.2.0",
+    "geist": "^1.4.2",
     "next": "15.4.3",
     "next-sitemap": "^4.2.3",
     "react": "19.1.0",
