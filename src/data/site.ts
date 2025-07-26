@@ -18,7 +18,7 @@ export const services = [
         desc: "Slab bathrooms, fireplaces, and kitchen countertops tailored to your space.",
     },
     {
-        title: "Serving the Tri‑State Area",
+        title: "Serving the Tri‑State Area (NY, NJ, CT)",
         desc: "Residential, commercial, hospitality, institutional.",
     },
 ] as const;
