@@ -1,9 +1,9 @@
 import Head from "next/head";
 import {ReactNode} from "react";
 import SEOJsonLd from "@/components/SEOJsonLd";
+import {URL} from "@/data/site";
 
 export default function Layout({children}: { children: ReactNode }) {
-    const URL = "https://tristatestoneprotection.com"; // TODO update
     return (
         <>
             <Head>
@@ -24,7 +24,7 @@ export default function Layout({children}: { children: ReactNode }) {
             </Head>
             <SEOJsonLd/>
             <main className="min-h-screen flex flex-col bg-white text-black scroll-smooth">{children}</main>
-            <footer className="mt-auto py-6 text-center text-sm text-gray-500">
+            <footer className="mt-auto py-6 text-center text-sm text-gray-300">
                 Copyright © {new Date().getFullYear()} Tristate Stone Protection · Serving NY, NJ & CT ·
                 Crafted&nbsp;with&nbsp;care
             </footer>
