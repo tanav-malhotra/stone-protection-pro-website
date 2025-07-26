@@ -80,6 +80,7 @@ export default function HomeGallery() {
                     close={() => setOpen(false)}
                     slides={slides}
                     plugins={[Zoom]}
+                    carousel={{finite: true}}
                     zoom={{maxZoomPixelRatio: 2}}
                 />
             )}

@@ -105,6 +105,7 @@ export default function GalleryPage() {
                     index={index}
                     slides={slides}
                     plugins={[Zoom, Video]}
+                    carousel={{finite: true}}
                     zoom={{maxZoomPixelRatio: 2}}
                     render={{buttonPrev: undefined, buttonNext: undefined}}
                 />
