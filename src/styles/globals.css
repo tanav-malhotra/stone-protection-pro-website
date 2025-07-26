@@ -2,6 +2,12 @@
 
 @tailwind utilities;
 
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
 :root {
   --background: #ffffff;
   --foreground: #171717;
@@ -10,8 +16,8 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  /*--font-sans: var(--font-geist-sans);*/
-  /*--font-mono: var(--font-geist-mono);*/
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -27,11 +33,11 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-a {
+a.animated-link {
   position: relative;
 }
 
-a::after {
+a.animated-link::after {
   content: "";
   position: absolute;
   width: 0;
@@ -42,7 +48,7 @@ a::after {
   transition: width 0.2s;
 }
 
-a:hover::after {
+a.animated-link:hover::after {
   width: 100%;
 }
 
