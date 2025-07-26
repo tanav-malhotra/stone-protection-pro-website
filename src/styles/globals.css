@@ -6,6 +6,10 @@
   html {
     scroll-behavior: smooth;
   }
+
+  body {
+    overflow-x: hidden;
+  }
 }
 
 :root {
@@ -52,6 +56,3 @@ a.animated-link:hover::after {
   width: 100%;
 }
 
-html {
-  scroll-behavior: smooth;
-}
