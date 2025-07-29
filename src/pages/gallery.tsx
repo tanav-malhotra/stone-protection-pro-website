@@ -35,7 +35,7 @@ export default function GalleryPage() {
             <Nav/>
 
             <section className="pt-36 px-6 pb-24 max-w-7xl mx-auto">
-                {/* back pill aligned left */}
+                {/* back button aligned left */}
                 <Link
                     href="/#gallery"
                     scroll={false}
@@ -49,7 +49,7 @@ export default function GalleryPage() {
                     Imagine the Possibilities
                 </h1>
 
-                {/* big‑tile grid */}
+                {/* big‑tile media grid */}
                 <div
                     className="grid gap-10
                      sm:grid-cols-1
