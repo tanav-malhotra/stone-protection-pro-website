@@ -25,7 +25,7 @@ export default function HomeGallery() {
                    grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 gap-10
                    place-content-center"
             >
-                {/* first 3 clickable images */}
+                {/* first 3 clickable images in the grid */}
                 {featuredMedia.map((img, i) => (
                     <button
                         key={img.src}
@@ -34,7 +34,7 @@ export default function HomeGallery() {
                             setOpen(true);
                         }}
                         className="group relative aspect-square w-full rounded-xl shadow-md
-                       overflow-hidden cursor-zoom-in"
+                            overflow-hidden cursor-zoom-in"
                     >
                         <Image
                             src={img.src}
@@ -46,11 +46,11 @@ export default function HomeGallery() {
                     </button>
                 ))}
 
-                {/* blurred “view more” tile */}
+                {/* blurred “View More” tile as last tile in grid */}
                 <Link
                     href="/gallery"
                     className="group relative aspect-square w-full flex items-center justify-center
-                     overflow-hidden rounded-xl shadow-md"
+                        overflow-hidden rounded-xl shadow-md"
                 >
                     <Image
                         src="/images/bathroom4.jpg"
@@ -58,14 +58,14 @@ export default function HomeGallery() {
                         fill
                         sizes="410px"
                         className="object-cover filter blur-lg brightness-75
-                       transition group-hover:blur-0 group-hover:brightness-65"
+                            transition group-hover:blur-0 group-hover:brightness-65"
                     />
                     <span
                         className="relative z-10 text-white text-2xl font-semibold tracking-wide
-                        before:absolute before:left-0 before:-bottom-1
-                        before:h-[2px] before:w-0 before:bg-white
-                        before:transition-all before:duration-300
-                        group-hover:before:w-full"
+                            before:absolute before:left-0 before:-bottom-1
+                            before:h-[2px] before:w-0 before:bg-white
+                            before:transition-all before:duration-300
+                            group-hover:before:w-full"
                     >
                     View&nbsp;More&nbsp;→
                   </span>
