@@ -2,9 +2,9 @@ export const contactEmail = "stoneprotection21@gmail.com";
 export const URL = "https://stoneprotectionpros.com"
 
 export const hero = {
-    headline: "Protect Your Stone from Etching.",
+    headline: "Protect Your Stone from  Staining & Etching.",
     subheadline:
-        "Tristate Stone Protection specializes in MORE™ AntiEtch™ application and custom stone installations.",
+        "Tristate Stone Protection specializes in the application of MORE™ AntiEtch™ and custom stone installations.",
     cta: "Contact Us",
 } as const;
 
