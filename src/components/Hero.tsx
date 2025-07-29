@@ -28,6 +28,8 @@ export default function Hero() {
                     {hero.subheadline}
                 </p>
 
+                <br/>
+
                 <a
                     href={`mailto:${contactEmail}`}
                     className="inline-block px-6 py-3 border border-white hover:bg-white hover:text-black transition rounded-md"
