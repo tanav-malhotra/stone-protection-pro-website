@@ -25,7 +25,7 @@ export default function GalleryPage() {
                 width: 1280,
                 height: 720,
                 sources: [{src: m.src, type: "video/mp4"}],
-                poster: m.src + "#t=0.5", // quick first‑frame poster
+                autoplay: true,
             }
             : {src: m.src, alt: m.alt}
     );
@@ -80,16 +80,16 @@ export default function GalleryPage() {
                                     setOpen(true);
                                 }}
                                 className="group relative aspect-square w-full rounded-2xl
-                           shadow-lg overflow-hidden focus:outline-none cursor-zoom-in"
+                                    shadow-lg overflow-hidden focus:outline-none cursor-zoom-in"
                             >
                                 <Image
                                     src={m.src}
                                     alt={m.alt}
                                     fill
                                     sizes="(min-width:1280px) 25vw,
-                         (min-width:1024px) 33vw,
-                         (min-width:640px) 50vw,
-                         100vw"
+                                     (min-width:1024px) 33vw,
+                                     (min-width:640px) 50vw,
+                                     100vw"
                                     className="object-cover transition group-hover:scale-105"
                                 />
                             </button>
