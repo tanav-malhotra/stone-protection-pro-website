@@ -37,7 +37,7 @@ export default function Hero() {
 
                 {/* tiny email subtitle */}
                 <br/>
-                <p className="mt-3 text-sm text-white/90" href={`mailto:${contactEmail}`}>
+                <p className="mt-3 text-sm text-white/90">
                     stoneprotection21@gmail.com
                 </p>
             </div>
