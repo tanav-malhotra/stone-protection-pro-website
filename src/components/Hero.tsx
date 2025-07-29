@@ -34,6 +34,12 @@ export default function Hero() {
                 >
                     {hero.cta}
                 </a>
+
+                {/* tiny email subtitle */}
+                <br/>
+                <a className="mt-3 text-sm text-white/90" href={`mailto:${contactEmail}`}>
+                    stoneprotection21@gmail.com
+                </a>
             </div>
         </section>
     );
