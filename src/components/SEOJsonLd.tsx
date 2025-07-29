@@ -13,7 +13,7 @@ export default function SEOJsonLd() {
         url: URL,
         serviceType: [
             "Stone protection",
-            "MORE AntiEtch application",
+            "MORE™ AntiEtch™ application",
             "Custom stone installation",
         ],
     };
