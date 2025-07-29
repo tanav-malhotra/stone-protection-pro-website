@@ -5,7 +5,7 @@ export default function Services() {
     const [tipOpen, setTipOpen] = useState(false);
     const tipRef = useRef<HTMLButtonElement | null>(null);
 
-    /* close tooltip if you click anywhere else */
+    /* close the tooltip if you click anywhere else */
     useEffect(() => {
         const close = (e: MouseEvent) => {
             if (!tipRef.current?.contains(e.target as Node)) setTipOpen(false);
