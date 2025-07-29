@@ -24,9 +24,46 @@ export default function Layout({children}: { children: ReactNode }) {
             </Head>
             <SEOJsonLd/>
             <main className="min-h-screen flex flex-col bg-white text-black scroll-smooth">{children}</main>
-            <footer className="mt-auto py-6 text-center text-sm text-gray-300">
-                Copyright © {new Date().getFullYear()} Tristate Stone Protection · Serving NY, NJ & CT ·
-                Crafted&nbsp;with&nbsp;care
+
+
+            {/* original footer */}
+            {/*<footer className="mt-auto py-6 text-center text-sm text-gray-300">*/}
+            {/*    Copyright*/}
+            {/*    © {new Date().getFullYear() > 2025 ? `2025-${new Date().getFullYear()}` : new Date().getFullYear()} Tristate*/}
+            {/*    Stone Protection · All Rights Reserved*/}
+            {/*</footer>*/}
+
+            <footer className="mt-auto border-t bg-gray-950 text-gray-300 text-sm">
+                <div className="max-w-6xl mx-auto px-4 py-6 flex flex-col sm:flex-row
+                  items-center justify-between gap-4">
+                    {/* copy block */}
+                    <p className="text-center sm:text-left">
+                        Copyright © {new Date().getFullYear() > 2025
+                        ? `2025–${new Date().getFullYear()} `
+                        : "2025 "}
+                        Tristate Stone Protection · All Rights Reserved
+                    </p>
+
+                    {/* quick contact */}
+                    <a
+                        href="mailto:stoneprotection21@gmail.com"
+                        className="underline hover:text-white"
+                    >
+                        stoneprotection21@gmail.com
+                    </a>
+                </div>
+
+                {/* optional credit strip for discount */}
+                {/*<div className="py-2 text-center text-xs bg-gray-800 text-gray-500">*/}
+                {/*    Website crafted with care by*/}
+                {/*    <a*/}
+                {/*        href="https://www.linkedin.com/in/tanav-malhotra/"*/}
+                {/*        className="underline hover:text-white"*/}
+                {/*        target="_blank"*/}
+                {/*    >*/}
+                {/*        Tanav Malhotra*/}
+                {/*    </a>*/}
+                {/*</div>*/}
             </footer>
         </>
     );
