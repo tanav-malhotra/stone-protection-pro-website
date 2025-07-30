@@ -55,7 +55,7 @@ export default function Layout({children}: { children: ReactNode }) {
 
                 {/* optional credit strip for discount */}
                 <div className="py-2 text-center text-xs bg-gray-800 text-gray-300">
-                    Website crafted with care by {" "}
+                    Website designed and built by {" "}
                     <a
                         href="https://www.linkedin.com/in/tanav-malhotra/"
                         className="underline hover:text-white"
