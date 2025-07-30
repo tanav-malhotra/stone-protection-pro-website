@@ -54,16 +54,16 @@ export default function Layout({children}: { children: ReactNode }) {
                 </div>
 
                 {/* optional credit strip for discount */}
-                {/*<div className="py-2 text-center text-xs bg-gray-800 text-gray-500">*/}
-                {/*    Website crafted with care by*/}
-                {/*    <a*/}
-                {/*        href="https://www.linkedin.com/in/tanav-malhotra/"*/}
-                {/*        className="underline hover:text-white"*/}
-                {/*        target="_blank"*/}
-                {/*    >*/}
-                {/*        Tanav Malhotra*/}
-                {/*    </a>*/}
-                {/*</div>*/}
+                <div className="py-2 text-center text-xs bg-gray-800 text-gray-300">
+                    Website crafted with care by {" "}
+                    <a
+                        href="https://www.linkedin.com/in/tanav-malhotra/"
+                        className="underline hover:text-white"
+                        target="_blank"
+                    >
+                        Tanav Malhotra
+                    </a>
+                </div>
             </footer>
         </>
     );
