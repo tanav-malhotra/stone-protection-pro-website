@@ -1,7 +1,5 @@
 ## Tristate Stone Protection — Internal README
 
-*(for my eyes only)*
-
 ### TODO:
 
 - SEO (sitemap / robots.txt, etc.)
