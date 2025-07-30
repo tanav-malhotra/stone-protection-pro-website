@@ -1,75 +1,111 @@
-## Tristate Stone Protection — Internal README
+<div align="center">
 
-### TODO:
+# Tristate Stone Protection
 
-- SEO (sitemap / robots.txt, etc.)
+*simple Next .js marketing site I made for a client's business*
+
+</div>
 
 ---
 
-### Quick Start 🛠️
+## ✨ Live demo
+
+[Live Demo →](https://www.stoneprotectionpro.com)
+
+*(runs on Vercel’s global Edge Network – first load < 100 ms in the US)*
+
+---
+
+## ⚡️ Features
+
+| Section / Feature   | Highlights                                                                                                                                                                                         |
+|---------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **Video Hero**      | Autoplay + loop background; headline & CTA overlay.                                                                                                                                                |
+| **Services**        | 3-card grid with subtle hover shadow, tooltip on “Tri-State” (NY · NJ · CT).                                                                                                                       |
+| **MORE™ AntiEtch™** | Two-column bullet list, responsive to single column on mobile.                                                                                                                                     |
+| **Gallery**         | Mini 2 × 2 preview on home → full gallery page. Images & portrait videos open in [yet-another-react-lightbox](https://github.com/igordanchenko/yet-another-react-lightbox) (Zoom + Video plugins). |
+| **Mobile nav**      | Hamburger menu with smooth slide/fade animation.                                                                                                                                                   |
+| **SEO**             | Open Graph tags, JSON-LD `LocalBusiness` schema, dynamic sitemap/robots via `next-sitemap`.                                                                                                        |
+| **Accessibility**   | Semantic headings, keyboard-navigable nav, visible focus rings.                                                                                                                                    |
+
+---
+
+## 🛠️ Quick start
 
 ```bash
-# install deps
+# 1. Install dependencies
 npm i
 
-# run dev server
-npm run dev    # http://localhost:3000
+# 2. Dev server
+npm run dev               # http://localhost:3000
 
-# build & generate sitemap / robots.txt
+# 3. Production build + sitemap/robots
 npm run build
 npm start
 ```
 
 ---
 
-### Tech Stack
+## 🏗️ Tech stack
 
-| Layer         | Choice                                            | Notes                                          |
-|---------------|---------------------------------------------------|------------------------------------------------|
-| **Framework** | **Next.js 14 (pages router)**                     | Simpler than App Router for a 1‑page brochure. |
-| **Runtime**   | Vercel                                            | Auto‑SSL + edge CDN.                           |
-| **Styling**   | Tailwind CSS                                      | Utility‑first; see `globals.css` for tweaks.   |
-| **Icons**     | @heroicons/react                                  | Only used for AntiEtch blue checkmarks.        |
-| **Light‑box** | yet‑another‑react‑lightbox (Zoom + Video plugins) | Handles image zoom & inline video playback.    |
-
----
-
-### Component Notes
-
-| Component        | Gotchas / Customization                                                                                                                                                                                   |
-|------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **Hero**         | Background video in `/public/videos/hero.mp4` (muted, loop). Overlay dimming via `bg-black/50`.                                                                                                           |
-| **AntiEtch**     | Benefits array in `site.ts`. Split auto; center alignment. Uses `CheckCircleIcon`.                                                                                                                        |
-| **HomeGallery**  | • 2×2 grid (`max-w-[820px]`). <br>• First 3 tiles open light‑box (`cursor-zoom-in`). <br>• 4ᵗʰ tile = blurred link to `/gallery` with underline animation.                                                |
-| **Gallery Page** | • Big square tiles (`aspect-square`, gap‑12). <br>• Videos: thumbnail poster + controls; open in light‑box with sound. <br>• Light‑box slides typed as `Slide[]`; portrait videos keep aspect `720×1280`. |
-| **Layout / SEO** | OpenGraph meta + JSON‑LD LocalBusiness schema; sitemap generated post‑build by `next-sitemap`.                                                                                                            |
+| Layer        | Choice                         | Notes                                                                          |
+|--------------|--------------------------------|--------------------------------------------------------------------------------|
+| Front-end    | **Next.js 14 (pages router)**  | Perfectly fine for a brochure; no need for App Router/React Server Components. |
+| Styling      | **Tailwind CSS**               | Utility-first. Global tweaks in `styles/globals.css`.                          |
+| Icons        | **@heroicons/react**           | Blue check-circle bullets, hamburger icon.                                     |
+| Media Viewer | **yet-another-react-lightbox** | Zoom + Video plugins handle image zoom & inline MP4 playback.                  |
+| Hosting      | **Vercel**                     | Zero-config deploy, free edge CDN, auto-SSL.                                   |
 
 ---
 
-### Tailwind Tips 🖌️
+## 🗂️ Important folders
 
-| Utility          | Purpose                                           |
-|------------------|---------------------------------------------------|
-| `aspect-square`  | Keeps grid tiles perfect squares.                 |
-| `cursor-zoom-in` | Shows magnifier cursor on zoomable imgs.          |
-| `scroll-mt-16`   | Offset for anchor jump under fixed nav (\~64 px). |
-
----
-
-### To‑Do / Future Ideas 💡
-
-* **Masonry grid** for gallery (CSS columns) if photo set grows.
-* **Lighthouse**: ensure all images have `alt`; run `npm run build && npx lighthouse ...`.
+```
+public/                static assets (logo, images, videos)
+src/
+  components/          UI building blocks
+  pages/               Next.js pages   (index, gallery)
+  data/site.ts         Copy + gallery arrays
+  styles/globals.css   Tailwind config tweaks
+```
 
 ---
 
-### Deployment Steps 🚀
+## 🎨 Tailwind cheat-sheet
 
-1. Push to GitHub `main`.
-2. Vercel auto‑deploys. Environment vars are set via dashboard.
-3. After domain name purchase, verify `/sitemap.xml` & `/robots.txt`.
-4. In Google Search Console, fetch as Google & submit sitemap.
+| Utility            | Why we use it                                             |
+|--------------------|-----------------------------------------------------------|
+| `aspect-square`    | Ensures gallery tiles stay perfect squares on any screen. |
+| `cursor-zoom-in`   | Shows magnifier cursor over light-box images.             |
+| `scroll-mt-16`     | Offsets anchor jumps under the fixed navbar (\~64 px).    |
+| `duration-[250ms]` | Arbitrary duration for smooth dropdown animation.         |
 
 ---
 
-*Last updated: 30 July 2025*
+## 🚀 Deploy notes
+
+1. **Push to `main`** → Vercel auto-builds.
+2. Add a custom domain in **Dashboard ▸ Settings ▸ Domains**.
+3. Verify `/sitemap.xml` & `/robots.txt` once DNS propagates.
+4. Submit sitemap in Google Search Console if SEO is important.
+
+*(No environment variables needed – site is static.)*
+
+---
+
+## 📌 Roadmap / nice-to-haves
+
+* Masonry (Pinterest-style) gallery layout when image count grows
+* CMS hook-up (Sanity, Payload) for client-editable copy & photos
+* Lighthouse pass ≥ 95 on mobile after image compression
+
+---
+
+##### License
+
+GPL-3.0 — free to use, modify, and deploy.
+*If you fork, please swap out the branding/logo and replace images and other copyrighted material that isn’t yours.*
+
+---
+
+<sub>Last updated: 30 July 2025</sub>
