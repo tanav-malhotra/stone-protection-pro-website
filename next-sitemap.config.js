@@ -1,5 +1,5 @@
 module.exports = {
-    siteUrl: "https://stoneprotectionpros.com", // TODO: update
+    siteUrl: "https://stoneprotectionpro.com",
     generateRobotsTxt: true,
     transform: async (config, path) => ({
         loc: path,
