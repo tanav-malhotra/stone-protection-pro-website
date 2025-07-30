@@ -4,8 +4,6 @@
 
 ### TODO:
 
-- Domain name purchase
-- transfer to Barbara's account
 - SEO (sitemap / robots.txt, etc.)
 
 ---
@@ -76,4 +74,4 @@ npm start
 
 ---
 
-*Last updated: 29 July 2025*
+*Last updated: 30 July 2025*
