@@ -1,5 +1,5 @@
 export const contactEmail = "stoneprotection21@gmail.com";
-export const URL = "https://stoneprotectionpros.com"
+export const URL = "https://stoneprotectionpro.com"
 
 export const hero = {
     headline: "Protect Your Stone from  Staining & Etching.",
